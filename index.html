@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>☠ Horror Games</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Creepster&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)">
+<link rel="preconnect" href="[fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+<link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Creepster&family=Nunito:wght@400;600;700&display=swap)" rel="stylesheet">
 <style>
   :root {
     --bg: #0a0a0f;
@@ -26,28 +26,23 @@
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
-
   html { scroll-behavior: smooth; }
-
   body {
     background: var(--bg);
     color: var(--text);
     font-family: 'Nunito', sans-serif;
     min-height: 100vh;
-    cursor: default;
   }
 
-  /* ── Noise overlay ── */
   body::before {
     content: '';
     position: fixed; inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='[w3.org](http://www.w3.org/2000/svg)'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
     pointer-events: none;
     z-index: 9999;
     opacity: 0.4;
   }
 
-  /* ── Header ── */
   header {
     position: sticky; top: 0;
     z-index: 100;
@@ -74,7 +69,13 @@
     text-shadow: 0 0 20px rgba(255,34,68,0.5);
     flex-shrink: 0;
   }
-  .logo span { color: var(--text-dim); font-size: 1rem; font-family: 'Nunito', sans-serif; font-weight: 400; margin-left: 8px; }
+  .logo span {
+    color: var(--text-dim);
+    font-size: 1rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    margin-left: 8px;
+  }
 
   .search-wrap {
     flex: 1;
@@ -144,7 +145,6 @@
     margin-left: auto;
   }
 
-  /* ── Hero ── */
   .hero {
     text-align: center;
     padding: 56px 24px 32px;
@@ -167,11 +167,7 @@
     text-shadow: 0 0 40px rgba(255,34,68,0.3), 0 2px 0 #000;
   }
   .hero h1 em { color: var(--red); font-style: normal; }
-  .hero p {
-    margin-top: 10px;
-    color: var(--text-dim);
-    font-size: 0.95rem;
-  }
+  .hero p { margin-top: 10px; color: var(--text-dim); font-size: 0.95rem; }
   .blood-drip {
     font-size: 1.6rem;
     display: block;
@@ -181,10 +177,9 @@
   }
   @keyframes drip {
     0%,100% { transform: scaleY(1); }
-    50% { transform: scaleY(1.15); }
+    50%      { transform: scaleY(1.15); }
   }
 
-  /* ── Grid ── */
   .grid-wrap {
     max-width: 1400px;
     margin: 0 auto;
@@ -196,7 +191,6 @@
     gap: 18px;
   }
 
-  /* ── Card ── */
   .card {
     background: var(--card);
     border: 1px solid var(--border);
@@ -267,10 +261,10 @@
     color: var(--text-dim);
     white-space: nowrap;
   }
-  .tag.price-free { color: var(--green); border-color: rgba(34,255,136,0.2); background: rgba(34,255,136,0.05); }
-  .tag.price-sale { color: var(--orange); border-color: rgba(255,136,51,0.2); background: rgba(255,136,51,0.05); }
-  .tag.price-paid { color: #aac4ff; border-color: rgba(100,160,255,0.2); background: rgba(100,160,255,0.05); }
-  .tag.price-demo { color: #dd88ff; border-color: rgba(200,100,255,0.2); background: rgba(200,100,255,0.05); }
+  .tag.price-free { color: var(--green);  border-color: rgba(34,255,136,0.2);  background: rgba(34,255,136,0.05); }
+  .tag.price-sale { color: var(--orange); border-color: rgba(255,136,51,0.2);  background: rgba(255,136,51,0.05); }
+  .tag.price-paid { color: #aac4ff;       border-color: rgba(100,160,255,0.2); background: rgba(100,160,255,0.05); }
+  .tag.price-demo { color: #dd88ff;       border-color: rgba(200,100,255,0.2); background: rgba(200,100,255,0.05); }
   .tag.price-na   { color: var(--text-dim); }
 
   .card-note {
@@ -311,7 +305,6 @@
     color: #fff;
   }
 
-  /* ── Loading / Error ── */
   .state-msg {
     text-align: center;
     padding: 80px 20px;
@@ -329,12 +322,10 @@
   }
   @keyframes spin { to { transform: rotate(360deg); } }
 
-  /* ── Scrollbar ── */
   ::-webkit-scrollbar { width: 6px; }
   ::-webkit-scrollbar-track { background: var(--bg); }
   ::-webkit-scrollbar-thumb { background: var(--red-dim); border-radius: 3px; }
 
-  /* ── Price loading shimmer ── */
   .price-loading {
     display: inline-block;
     width: 50px; height: 14px;
@@ -345,11 +336,10 @@
     vertical-align: middle;
   }
   @keyframes shimmer {
-    0% { background-position: 200% 0; }
+    0%   { background-position: 200% 0; }
     100% { background-position: -200% 0; }
   }
 
-  /* ── Sale badge ── */
   .sale-badge {
     position: absolute;
     top: 8px; right: 8px;
@@ -362,17 +352,6 @@
   }
   .card-img-wrap { position: relative; }
 
-  /* ── No results ── */
-  #no-results {
-    display: none;
-    grid-column: 1/-1;
-    text-align: center;
-    padding: 60px 20px;
-    color: var(--text-dim);
-    font-size: 1rem;
-  }
-
-  /* ── Last updated ── */
   #last-updated {
     text-align: center;
     font-size: 0.76rem;
@@ -386,7 +365,7 @@
 
 <header>
   <div class="header-inner">
-    <div class="logo">Horror<span id="game-count-badge"></span></div>
+    <div class="logo">☠ Horror<span id="game-count-badge"></span></div>
     <div class="search-wrap">
       <input type="text" id="search" placeholder="Game suchen…" autocomplete="off">
     </div>
@@ -406,8 +385,8 @@
 </header>
 
 <div class="hero">
-  <h1><em>Horror</em> Games</h1>
-  <p>Meine Liste an interessanten Horrorgames</p>
+  <h1>☠ <em>Horror</em> Games</h1>
+  <p>Meine persönliche Sammlung an grusligen Perlen</p>
   <span class="blood-drip">🩸</span>
 </div>
 
@@ -425,28 +404,126 @@
 // ─────────────────────────────────────────────
 //  CONFIG
 // ─────────────────────────────────────────────
-const SHEET_ID = '1DkkAnT3A-0Xw9prChT4M2OkWbe4uu2VmVFi9SHmeNUc';
+const SHEET_ID   = '1DkkAnT3A-0Xw9prChT4M2OkWbe4uu2VmVFi9SHmeNUc';
 const SHEET_NAME = 'Horrorgames';
-// Public CSV export URL (no API key needed, sheet must be "Anyone with link can view")
-const CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(SHEET_NAME)}`;
-
-// Steam CDN for header images
-const steamImg = id => `https://cdn.akamai.steamstatic.com/steam/apps/${id}/header.jpg`;
+const CSV_URL    = `[docs.google.com](https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(SHEET_NAME)})`;
+const steamImg   = id => `[cdn.akamai.steamstatic.com](https://cdn.akamai.steamstatic.com/steam/apps/${id}/header.jpg)`;
 
 // ─────────────────────────────────────────────
 //  STATE
 // ─────────────────────────────────────────────
-let allGames = [];
+let allGames      = [];
 let filteredGames = [];
 let currentFilter = 'all';
 
 // ─────────────────────────────────────────────
-//  PARSE CSV
+//  GAMETIME — Hilfsfunktionen
+// ─────────────────────────────────────────────
+
+// Rundet Minuten auf halbe Stunden: 90 → 1.5, 75 → 1.5, 60 → 1
+function roundHours(min) {
+  return Math.round((min / 60) * 2) / 2;
+}
+
+// Einzelne Minutenzahl → Anzeigetext
+// < 60  → "X Min"
+// ≥ 60  → "1 Std" / "1,5 Std" / "2 Std" etc.
+function formatSingle(min) {
+  if (min < 60) return `${min} Min`;
+  const h = roundHours(min);
+  return h % 1 === 0
+    ? `${h} Std`
+    : `${h.toFixed(1).replace('.', ',')} Std`;
+}
+
+// Haupt-Formatter — verarbeitet Einzelwerte UND Ranges ("720-900")
+// Gibt den fertigen Anzeigestring zurück oder null wenn leer/ungültig
+function formatMinutes(input) {
+  if (input === null || input === undefined || input === '') return null;
+  const str = String(input).trim();
+  if (!str || str === '/') return null;
+
+  // Range erkennen: "720-900" oder "720–900"
+  const rangeMatch = str.match(/^(\d+)\s*[-–]\s*(\d+)$/);
+  if (rangeMatch) {
+    const lo = parseInt(rangeMatch[1], 10);
+    const hi = parseInt(rangeMatch[2], 10);
+    if (lo <= 0 || hi <= 0) return null;
+
+    const loIsMin = lo < 60;
+    const hiIsMin = hi < 60;
+
+    // Beide unter 60 Min → "30–45 Min"
+    if (loIsMin && hiIsMin) {
+      return `${lo}–${hi} Min`;
+    }
+    // Beide ab 60 Min → "12–15 Std"
+    if (!loIsMin && !hiIsMin) {
+      const loH = roundHours(lo);
+      const hiH = roundHours(hi);
+      const fmt = h => h % 1 === 0 ? `${h}` : `${h.toFixed(1).replace('.', ',')}`;
+      return `${fmt(loH)}–${fmt(hiH)} Std`;
+    }
+    // Gemischt (z.B. 50–70: unterschreitet/überschreitet 60er-Grenze) → beide einzeln
+    return `${formatSingle(lo)}–${formatSingle(hi)}`;
+  }
+
+  // Einzelwert
+  const n = parseInt(str, 10);
+  if (!n || n <= 0) return null;
+  return formatSingle(n);
+}
+
+// Gibt den Sortierwert zurück (Mittelwert bei Range, sonst die Zahl selbst)
+function timeToSortValue(input) {
+  if (input === null || input === undefined || input === '') return Infinity;
+  const str = String(input).trim();
+  if (!str || str === '/') return Infinity;
+
+  const rangeMatch = str.match(/^(\d+)\s*[-–]\s*(\d+)$/);
+  if (rangeMatch) {
+    return (parseInt(rangeMatch[1], 10) + parseInt(rangeMatch[2], 10)) / 2;
+  }
+  const n = parseInt(str, 10);
+  return isNaN(n) ? Infinity : n;
+}
+
+// Fallback: Text aus Spalte D ("1,5 Std", "45 Min", "4-5 Std") → Minuten-String
+// Gibt direkt einen normalisierten String zurück, den formatMinutes() versteht
+function normalizeTimeText(str) {
+  if (!str || str === '/') return null;
+  const s = str.toLowerCase().replace(',', '.').replace('–', '-');
+
+  // Range wie "4-5 Std" oder "30-45 Min"
+  const range = s.match(/(\d+\.?\d*)\s*-\s*(\d+\.?\d*)\s*(std|h|min)?/);
+  if (range) {
+    const unit = (range[3] || '').trim();
+    const lo = parseFloat(range[1]);
+    const hi = parseFloat(range[2]);
+    const loMin = unit.startsWith('min') ? Math.round(lo) : Math.round(lo * 60);
+    const hiMin = unit.startsWith('min') ? Math.round(hi) : Math.round(hi * 60);
+    return `${loMin}-${hiMin}`;
+  }
+
+  // Einzelwert wie "1,5 Std" oder "45 Min"
+  const single = s.match(/(\d+\.?\d*)\s*(std|h|min)?/);
+  if (single) {
+    const val  = parseFloat(single[1]);
+    const unit = (single[2] || '').trim();
+    const mins = unit.startsWith('min') ? Math.round(val) : Math.round(val * 60);
+    return String(mins);
+  }
+  return null;
+}
+
+// ─────────────────────────────────────────────
+//  CSV PARSER
 // ─────────────────────────────────────────────
 function parseCSV(text) {
   const lines = text.trim().split('\n');
   const games = [];
-  // Find header row (contains "App-ID" or "Name")
+
+  // Header-Zeile finden
   let headerIdx = -1;
   for (let i = 0; i < lines.length; i++) {
     const lower = lines[i].toLowerCase();
@@ -458,26 +535,48 @@ function parseCSV(text) {
   if (headerIdx === -1) return games;
 
   const headers = parseLine(lines[headerIdx]).map(h => h.trim().toLowerCase());
-  const colAppId   = headers.findIndex(h => h.includes('app'));
-  const colPreis   = headers.findIndex(h => h.includes('preis'));
-  const colName    = headers.findIndex(h => h === 'name');
-  const colTime    = headers.findIndex(h => h.includes('game') || h.includes('time') || h.includes('zeit'));
-  const colNotiz   = headers.findIndex(h => h.includes('notiz'));
-  const colLink    = headers.findIndex(h => h.includes('link'));
+
+  // Spalten-Indizes
+  const colAppId    = headers.findIndex(h => h.includes('app'));
+  const colPreis    = headers.findIndex(h => h === 'preis');
+  const colName     = headers.findIndex(h => h === 'name');
+  // Spalte E: reine Minuten-Eingabe (Name: "min" oder "minuten" o.ä.)
+  const colTimeMin  = headers.findIndex(h => h === 'min' || h === 'minuten' || h === 'time_min' || h === 'gametime_min' || h === 'spielzeit_min');
+  // Spalte D: Text-Fallback ("1,5 Std", "45 Min" etc.)
+  const colTimeText = headers.findIndex(h => (h.includes('gametime') || h.includes('spielzeit')) && h !== headers[colTimeMin]);
+  const colNotiz    = headers.findIndex(h => h.includes('notiz'));
+  const colLink     = headers.findIndex(h => h.includes('link'));
 
   for (let i = headerIdx + 1; i < lines.length; i++) {
     const cols = parseLine(lines[i]);
     const name = get(cols, colName);
     if (!name || name.length < 2) continue;
+
+    const rawMin      = get(cols, colTimeMin);   // z.B. "90" oder "720-900"
+    const rawTimeText = get(cols, colTimeText);  // z.B. "1,5 Std" — Fallback
+
+    // timeRaw: der normalisierte Minuten-String für Anzeige + Sortierung
+    // Priorität: Spalte E > Spalte D (als Fallback)
+    let timeRaw = null;
+    const trimmed = rawMin ? rawMin.trim() : '';
+    if (trimmed && trimmed !== '/') {
+      // Spalte E direkt übernehmen (Einzelzahl oder Range wie "720-900")
+      timeRaw = trimmed;
+    } else if (rawTimeText) {
+      // Spalte D als Fallback: in Minuten-String umwandeln
+      timeRaw = normalizeTimeText(rawTimeText);
+    }
+
     games.push({
       appId:   get(cols, colAppId),
       preis:   get(cols, colPreis),
       name,
-      time:    get(cols, colTime),
+      timeRaw,          // String für Anzeige & Sortierung, z.B. "90" oder "720-900"
       notiz:   get(cols, colNotiz),
       link:    get(cols, colLink),
-      steamPrice: null, // will be fetched
-      discount:   null,
+      steamPrice:     null,
+      discount:       null,
+      isActuallyFree: false,
     });
   }
   return games;
@@ -488,7 +587,6 @@ function get(arr, idx) {
   return (arr[idx] || '').trim();
 }
 
-// Simple CSV line parser (handles quoted fields)
 function parseLine(line) {
   const result = [];
   let current = '';
@@ -513,50 +611,50 @@ function parseLine(line) {
 // ─────────────────────────────────────────────
 function priceToNum(str) {
   if (!str) return Infinity;
-  const s = str.replace(',', '.').replace(/[^0-9.]/g, '');
+  const s = String(str).replace(',', '.').replace(/[^0-9.]/g, '');
   const n = parseFloat(s);
   return isNaN(n) ? Infinity : n;
 }
 
 function isDemo(game) {
-  const n = game.notiz.toLowerCase();
-  const p = game.preis.toLowerCase();
+  const n = (game.notiz || '').toLowerCase();
+  const p = (game.preis  || '').toLowerCase();
   return n.includes('demo') || p.includes('demo') || game.name.toLowerCase().includes('demo');
 }
 
 function isFree(game) {
+  if (game.isActuallyFree) return true;
   const p = priceToNum(game.preis);
-  return p === 0 && game.preis.includes('0');
+  return p === 0;
 }
 
 function isNAInDE(game) {
-  return game.notiz.toLowerCase().includes('nicht zur verfügung');
+  return (game.notiz || '').toLowerCase().includes('nicht zur verfügung');
 }
 
 // ─────────────────────────────────────────────
-//  STEAM PRICE FETCH (via allorigins proxy)
+//  STEAM PRICE FETCH
 // ─────────────────────────────────────────────
 async function fetchSteamPrice(appId) {
   if (!appId || appId.trim() === '') return null;
   try {
-    const url = `https://store.steampowered.com/api/appdetails?appids=${appId}&cc=de&filters=price_overview`;
-    const proxy = `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
-    const res = await fetch(proxy, { signal: AbortSignal.timeout(6000) });
+    const url   = `[store.steampowered.com](https://store.steampowered.com/api/appdetails?appids=${appId}&cc=de&filters=price_overview)`;
+    const proxy = `[api.allorigins.win](https://api.allorigins.win/get?url=${encodeURIComponent(url)})`;
+    const res   = await fetch(proxy, { signal: AbortSignal.timeout(6000) });
     if (!res.ok) return null;
-    const json = await res.json();
-    const data = JSON.parse(json.contents);
-    const info = data?.[appId]?.data?.price_overview;
+    const json  = await res.json();
+    const data  = JSON.parse(json.contents);
+    const info  = data?.[appId]?.data?.price_overview;
     if (!info) return null;
     return {
-      final: (info.final / 100).toFixed(2).replace('.', ',') + ' €',
-      initial: (info.initial / 100).toFixed(2).replace('.', ',') + ' €',
+      final:    (info.final   / 100).toFixed(2).replace('.', ',') + ' €',
+      initial:  (info.initial / 100).toFixed(2).replace('.', ',') + ' €',
       discount: info.discount_percent,
-      isFree: info.final === 0,
+      isFree:   info.final === 0,
     };
   } catch { return null; }
 }
 
-// Batch fetch with concurrency limit
 async function fetchPricesInBatches(games, batchSize = 4) {
   const gamesWithId = games.filter(g => g.appId);
   for (let i = 0; i < gamesWithId.length; i += batchSize) {
@@ -564,9 +662,9 @@ async function fetchPricesInBatches(games, batchSize = 4) {
     await Promise.all(batch.map(async g => {
       const price = await fetchSteamPrice(g.appId);
       if (price) {
-        g.steamPrice = price.final;
-        g.discount = price.discount > 0 ? price.discount : null;
-        g.isActuallyFree = price.isFree;
+        g.steamPrice      = price.final;
+        g.discount        = price.discount > 0 ? price.discount : null;
+        g.isActuallyFree  = price.isFree;
       }
       updateCard(g);
     }));
@@ -579,33 +677,31 @@ async function fetchPricesInBatches(games, batchSize = 4) {
 function renderGrid(games) {
   const grid = document.getElementById('grid');
   if (games.length === 0) {
-    grid.innerHTML = '<div id="no-results" style="display:block;grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--text-dim)">😶 Keine Games gefunden</div>';
+    grid.innerHTML = '<div style="display:block;grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--text-dim)">😶 Keine Games gefunden</div>';
     return;
   }
-
   grid.innerHTML = games.map((g, i) => cardHTML(g, i)).join('');
   document.getElementById('stats').textContent = `${games.length} / ${allGames.length} Games`;
 }
 
 function cardHTML(g, animIdx) {
   const hasImg = !!g.appId;
-  const imgUrl = hasImg ? steamImg(g.appId) : '';
-  const link = g.link || (g.appId ? `https://store.steampowered.com/app/${g.appId}/` : '#');
-  const noteHtml = g.notiz && g.notiz !== '/' && g.notiz !== ''
+  const link   = g.link || (g.appId ? `[store.steampowered.com](https://store.steampowered.com/app/${g.appId}/)` : '#');
+
+  const noteHtml  = g.notiz && g.notiz !== '/' && g.notiz !== ''
     ? `<div class="card-note">${escHtml(g.notiz)}</div>` : '';
 
-  const priceTag = buildPriceTag(g);
-  const timeTag = g.time ? `<span class="tag">⏱ ${escHtml(g.time)}</span>` : '';
-  const naTag = isNAInDE(g) ? `<span class="tag" title="In Deutschland nicht verfügbar">🚫 DE n.v.</span>` : '';
-
-  const saleBadge = g.discount ? `<span class="sale-badge">-${g.discount}%</span>` : '';
-
-  const delay = Math.min(animIdx * 30, 600);
+  const priceTag  = buildPriceTag(g);
+  const timeLabel = formatMinutes(g.timeRaw);
+  const timeTag   = timeLabel ? `<span class="tag">⏱ ${timeLabel}</span>` : '';
+  const naTag     = isNAInDE(g) ? `<span class="tag" title="In Deutschland nicht verfügbar">🚫 DE n.v.</span>` : '';
+  const saleBadge = g.discount  ? `<span class="sale-badge">-${g.discount}%</span>` : '';
+  const delay     = Math.min(animIdx * 30, 600);
 
   return `<div class="card" id="card-${g.appId || slugify(g.name)}" style="animation-delay:${delay}ms">
   <div class="card-img-wrap">
     ${hasImg
-      ? `<img class="card-img" src="${imgUrl}" alt="${escHtml(g.name)}" loading="lazy" onerror="this.outerHTML='<div class=card-img-placeholder>🎮</div>'">`
+      ? `<img class="card-img" src="${steamImg(g.appId)}" alt="${escHtml(g.name)}" loading="lazy" onerror="this.outerHTML='<div class=card-img-placeholder>🎮</div>'">`
       : `<div class="card-img-placeholder">🎮</div>`}
     ${saleBadge}
   </div>
@@ -628,25 +724,19 @@ function cardHTML(g, animIdx) {
 }
 
 function buildPriceTag(g) {
-  // Steam price available
   if (g.steamPrice !== null) {
-    if (g.isActuallyFree) {
-      return `<span class="tag price-free">🆓 Kostenlos</span>`;
-    }
-    const cls = g.discount ? 'price-sale' : 'price-paid';
+    if (g.isActuallyFree) return `<span class="tag price-free">🆓 Kostenlos</span>`;
+    const cls  = g.discount ? 'price-sale' : 'price-paid';
     const icon = g.discount ? '🔥' : '💰';
     return `<span class="tag ${cls}">${icon} ${g.steamPrice}</span>`;
   }
-
-  // Sheet price fallback
   const p = (g.preis || '').trim();
-  if (!p || p === '') {
-    // Show shimmer if has appId (price being fetched), else N/A
-    if (g.appId) return `<span class="tag">💰 <span class="price-loading"></span></span>`;
-    return `<span class="tag price-na">💰 ?</span>`;
+  if (!p) {
+    return g.appId
+      ? `<span class="tag">💰 <span class="price-loading"></span></span>`
+      : `<span class="tag price-na">💰 ?</span>`;
   }
-  if (p === '0,00 €' || p === '0.00 €' || p.startsWith('0,00') || p.startsWith('0.00')) {
-    // Free or demo
+  if (p === '0,00 €' || p.startsWith('0,00') || p.startsWith('0.00')) {
     if (isDemo(g)) return `<span class="tag price-demo">🎮 Demo</span>`;
     return `<span class="tag price-free">🆓 Kostenlos</span>`;
   }
@@ -654,22 +744,22 @@ function buildPriceTag(g) {
 }
 
 function updateCard(g) {
-  const id = `card-${g.appId || slugify(g.name)}`;
-  const card = document.getElementById(id);
+  const card = document.getElementById(`card-${g.appId || slugify(g.name)}`);
   if (!card) return;
-  // Update price tag
-  const meta = card.querySelector('.card-meta');
-  if (!meta) return;
-  // Rebuild just the first tag (price)
-  const tags = meta.querySelectorAll('.tag');
-  const priceTag = buildPriceTag(g);
-  if (tags[0]) tags[0].outerHTML = priceTag;
-  // Update sale badge
+  const firstTag = card.querySelector('.card-meta .tag');
+  if (firstTag) firstTag.outerHTML = buildPriceTag(g);
   const imgWrap = card.querySelector('.card-img-wrap');
-  const existingBadge = imgWrap?.querySelector('.sale-badge');
-  if (g.discount && imgWrap) {
-    if (existingBadge) existingBadge.textContent = `-${g.discount}%`;
-    else { const b = document.createElement('span'); b.className='sale-badge'; b.textContent=`-${g.discount}%`; imgWrap.appendChild(b); }
+  if (imgWrap) {
+    const existing = imgWrap.querySelector('.sale-badge');
+    if (g.discount) {
+      if (existing) existing.textContent = `-${g.discount}%`;
+      else {
+        const b = document.createElement('span');
+        b.className   = 'sale-badge';
+        b.textContent = `-${g.discount}%`;
+        imgWrap.appendChild(b);
+      }
+    }
   }
 }
 
@@ -677,32 +767,26 @@ function updateCard(g) {
 //  FILTER / SORT
 // ─────────────────────────────────────────────
 function applyFiltersAndSort() {
-  const q = document.getElementById('search').value.toLowerCase();
+  const q    = document.getElementById('search').value.toLowerCase();
   const sort = document.getElementById('sort').value;
 
   filteredGames = allGames.filter(g => {
     const matchQ = !q || g.name.toLowerCase().includes(q) || (g.notiz || '').toLowerCase().includes(q);
     let matchFilter = true;
-    if (currentFilter === 'free') matchFilter = isFree(g) || g.isActuallyFree;
+    if (currentFilter === 'free') matchFilter = isFree(g);
     if (currentFilter === 'demo') matchFilter = isDemo(g);
     return matchQ && matchFilter;
   });
 
   filteredGames.sort((a, b) => {
-    if (sort === 'name') return a.name.localeCompare(b.name, 'de');
-    if (sort === 'price-asc') return priceToNum(a.steamPrice || a.preis) - priceToNum(b.steamPrice || b.preis);
+    if (sort === 'name')       return a.name.localeCompare(b.name, 'de');
+    if (sort === 'price-asc')  return priceToNum(a.steamPrice || a.preis) - priceToNum(b.steamPrice || b.preis);
     if (sort === 'price-desc') return priceToNum(b.steamPrice || b.preis) - priceToNum(a.steamPrice || a.preis);
-    if (sort === 'time-asc') return timeToMin(a.time) - timeToMin(b.time);
+    if (sort === 'time-asc')   return timeToSortValue(a.timeRaw) - timeToSortValue(b.timeRaw);
     return 0;
   });
 
   renderGrid(filteredGames);
-}
-
-function timeToMin(str) {
-  if (!str) return Infinity;
-  const m = str.match(/(\d+(?:[.,]\d+)?)/);
-  return m ? parseFloat(m[1].replace(',','.')) * (str.toLowerCase().includes('std') ? 60 : 1) : Infinity;
 }
 
 // ─────────────────────────────────────────────
@@ -719,11 +803,8 @@ function slugify(s) {
 //  LAST UPDATED
 // ─────────────────────────────────────────────
 function extractLastUpdated(csvText) {
-  // Sheet has "Letzte Änderung: DD.MM.YYYY HH:MM" somewhere
   const m = csvText.match(/Letzte Änderung[:\s]+([0-9.:\s]+)/i);
-  if (m) {
-    document.getElementById('last-updated').textContent = `Zuletzt aktualisiert: ${m[1].trim()}`;
-  }
+  if (m) document.getElementById('last-updated').textContent = `Zuletzt aktualisiert: ${m[1].trim()}`;
 }
 
 // ─────────────────────────────────────────────
@@ -731,17 +812,16 @@ function extractLastUpdated(csvText) {
 // ─────────────────────────────────────────────
 async function init() {
   const grid = document.getElementById('grid');
-
-  // Load sheet data
   let csvText;
   try {
     const res = await fetch(CSV_URL);
     if (!res.ok) throw new Error('HTTP ' + res.status);
     csvText = await res.text();
-  } catch (e) {
+  } catch {
     grid.innerHTML = `<div class="state-msg" style="grid-column:1/-1">
       <span class="icon">⚠️</span>
-      Konnte das Google Sheet nicht laden.<br><small>Stelle sicher, dass es auf "Jeder mit dem Link" steht.</small>
+      Konnte das Google Sheet nicht laden.<br>
+      <small>Stelle sicher, dass es auf "Jeder mit dem Link" steht.</small>
     </div>`;
     return;
   }
@@ -754,26 +834,21 @@ async function init() {
     return;
   }
 
-  // Sort alphabetically by default
-  allGames.sort((a,b) => a.name.localeCompare(b.name,'de'));
+  allGames.sort((a, b) => a.name.localeCompare(b.name, 'de'));
   filteredGames = [...allGames];
 
-  // Update badge
-  document.getElementById('game-count-badge').textContent = ` Games`;
+  document.getElementById('game-count-badge').textContent = ' Games';
   document.getElementById('stats').textContent = `${allGames.length} / ${allGames.length} Games`;
 
   renderGrid(filteredGames);
-
-  // Fetch Steam prices in background
   fetchPricesInBatches(allGames, 5);
 }
 
 // ─────────────────────────────────────────────
-//  EVENT LISTENERS
+//  EVENTS
 // ─────────────────────────────────────────────
 document.getElementById('search').addEventListener('input', applyFiltersAndSort);
 document.getElementById('sort').addEventListener('change', applyFiltersAndSort);
-
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
